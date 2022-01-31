@@ -38,12 +38,16 @@ import Students from "./Students";
 export default {
   data() {
     return {
-      name: "",
+      firstName: "",
+      lastName: "",
     };
   },
   methods: {
     async submit() {
-      axios.post("http://localhost:3000/students", { name: this.name });
+      axios.post("http://localhost:3000/students", {
+        firstName: this.firstName,
+        lastName: this.lastName,
+      });
     },
   },
   components: {
